@@ -72,3 +72,5 @@ if st.button("코디 완성하기"):
             st.write("전문가가 제안하는 코디 연출법을 참고해 보세요.")
 
 st.markdown("---")
+
+mood = st.color_picker("오늘의 기분을 표현해보세요.")
