@@ -12,6 +12,6 @@ if st.button("확인"):
     st.success(f"{name} / {grade}학년 / {class_num} / {difficulty}")
     st.markdown(f"점수: `{score}`")
     st.info(f"소감: {text}")
-    
-        
-    
+
+if st.button("눈 내리기"):
+    st.snow()
