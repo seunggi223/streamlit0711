@@ -1,17 +1,5 @@
 import streamlit as st
-
-st.title("counter app")
-if 'count' not in st.session_state:
-   st.session_state.count = 0 
- 
-if st.button("증가"):
-   st.session_state.count += 1
-st.markdown(f"## 현재 숫자: `{st.session_state.count}`")
-
-import streamlit as st
 import time
-
-st.markdown("---")
 
 def reset_game():
     st.session_state.start_time = 0
@@ -27,7 +15,7 @@ st.write("시작 버튼을 누르고, 마음속으로 10초를 센 뒤 종료 �
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("시작") or enter:
+    if st.button("시작"):
         st.session_state.start_time = time.time()  # 현재 시각 기록
         st.session_state.end_time = 0             # 종료 시간 초기화
 
