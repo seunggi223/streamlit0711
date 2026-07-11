@@ -85,24 +85,34 @@ st.button("전체 초기화", on_click = reset_all)
 
 st.markdown("---")
 
-st.title("오늘의 기분 색상 테스트 🎨")
+import streamlit as st
 
-color = st.color_picker(
-    "오늘 기분을 나타내는 색을 골라주세요",
-    "#00FF00"
-)
+st.title("색상으로 기분 확인하기 🎨")
 
-st.write("선택한 색:", color)
+color = st.color_picker("색상을 선택하세요", "#FFFFFF")
 
-if color == "#FF0000":
-    st.error("🔥 열정적이고 에너지가 넘치는 기분이네요!")
-elif color == "#0000FF":
-    st.info("🌊 차분하고 평온한 기분이네요.")
-elif color == "#FFFF00":
-    st.success("☀️ 밝고 즐거운 기분이네요!")
-elif color == "#00FF00":
-    st.success("🌱 편안하고 안정적인 기분이네요.")
-elif color == "#800080":
-    st.warning("🌙 감성적이고 생각이 많은 기분이네요.")
+# HEX → RGB 변환
+hex_color = color.lstrip("#")
+
+r = int(hex_color[0:2], 16)
+g = int(hex_color[2:4], 16)
+b = int(hex_color[4:6], 16)
+
+# 색상 범위 판단
+if r > 200 and g < 100 and b < 100:
+    st.write("❤️ 빨간색 계열 → 열정적인 기분")
+
+elif r > 200 and g > 180 and b < 100:
+    st.write("💛 노란색 계열 → 밝고 즐거운 기분")
+
+elif r < 100 and g > 150 and b < 150:
+    st.write("💚 초록색 계열 → 편안하고 안정적인 기분")
+
+elif r < 100 and g < 150 and b > 150:
+    st.write("💙 파란색 계열 → 차분하고 평온한 기분")
+
+elif r > 120 and b > 120 and g < 100:
+    st.write("💜 보라색 계열 → 감성적인 기분")
+
 else:
-    st.write("🎨 독특한 색이네요! 특별한 기분인가 봐요.")
+    st.write("🎨 다양한 느낌의 색이에요!")
