@@ -10,7 +10,8 @@ text = st.text_area("소감입니다.")
 
 if st.button("확인"):
     st.success(f"{name}/{grade}학년/{class_num}/{difficulty}")
-    st.info(f"{text}")
+    st.markdown(score)
+    st.info(f"소감:{text}")
     
         
     
