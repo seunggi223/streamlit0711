@@ -71,4 +71,4 @@ if st.button("코디 완성하기"):
             st.video("https://www.youtube.com/watch?v=lkMZ8ytly1k")
             st.write("전문가가 제안하는 코디 연출법을 참고해 보세요.")
 
-markdown("===")
+st.markdown("===")
