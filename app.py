@@ -85,4 +85,24 @@ st.button("전체 초기화", on_click = reset_all)
 
 st.markdown("---")
 
-mood = st.color_picker("오늘의 기분을 표현해보세요.")
+st.title("오늘의 기분 색상 테스트 🎨")
+
+color = st.color_picker(
+    "오늘 기분을 나타내는 색을 골라주세요",
+    "#00FF00"
+)
+
+st.write("선택한 색:", color)
+
+if color == "#FF0000":
+    st.error("🔥 열정적이고 에너지가 넘치는 기분이네요!")
+elif color == "#0000FF":
+    st.info("🌊 차분하고 평온한 기분이네요.")
+elif color == "#FFFF00":
+    st.success("☀️ 밝고 즐거운 기분이네요!")
+elif color == "#00FF00":
+    st.success("🌱 편안하고 안정적인 기분이네요.")
+elif color == "#800080":
+    st.warning("🌙 감성적이고 생각이 많은 기분이네요.")
+else:
+    st.write("🎨 독특한 색이네요! 특별한 기분인가 봐요.")
