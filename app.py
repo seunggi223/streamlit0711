@@ -56,7 +56,7 @@ with tab2:
 
 st.markdown("---")
 if st.button("코디 완성하기"):
-    with st.container(border=True):
+    with st.container():
         st.subheader(f"{user_name}님의 오늘의 룩북")
         st.write(f"오늘 같은 **{weather}** 날씨에는 이렇게 입어보세요!")
         st.markdown(f"""
