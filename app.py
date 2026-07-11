@@ -11,12 +11,7 @@ text = st.text_area("소감입니다.")
 if st.button("확인"):
     if agree:
         st.success(f"{name}/{grade}학년/{class_num}/{difficulty}")
-        st.markdown(f"""
-        * **질문 내용:** {question}
-        * **선택 모델:** `{ai_model}` | **말투:** `{tone}`
-        * **활성화 기능:** {', '.join(features) if features else '없음'}
-        * **창의성:** `{creativity}%` | **처리 속도:** `{ai_speed}`
-        """)
+        st.markdown(f"{name}/{grade}학년/{class_num}/{difficulty}")
         
         if age < 14:
             st.info("참고: 14세 미만 사용자이므로 보호자 모드가 활성화됩니다.")
