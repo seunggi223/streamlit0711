@@ -4,7 +4,13 @@ st.title("counter app")
 count = 0 
 if st.button("증가"):
    count += 1
-st.markdown(f"## 현재 숫자: `{count}`")
+   st.markdown(f"## 현재 숫자: `{count}`")
+
+
+
+
+
+
 
 import streamlit as st
 import time
