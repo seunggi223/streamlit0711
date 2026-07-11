@@ -9,9 +9,8 @@ score = st.slider("점수", 0, 100, 50)
 text = st.text_area("소감입니다.")
 
 if st.button("확인"):
-    if agree:
-        st.success(f"{name}/{grade}학년/{class_num}/{difficulty}")
-        st.markdown(f"{name}/{grade}학년/{class_num}/{difficulty}")
+    st.success(f"{name}/{grade}학년/{class_num}/{difficulty}")
+    st.markdown(f"{name}/{grade}학년/{class_num}/{difficulty}")
         
         if age < 14:
             st.info("참고: 14세 미만 사용자이므로 보호자 모드가 활성화됩니다.")
