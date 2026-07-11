@@ -9,6 +9,6 @@ score = st.slider("점수", 0, 100, 50)
 text = st.text_area("소감입니다.")
 
 if st.button("확인"):
-    st.markdown(f"{name}/{grade}학년/{class_num}/{difficulty}")
+    st.success(f"{name}/{grade}학년/{class_num}/{difficulty}")
         
     
