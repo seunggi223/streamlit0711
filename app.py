@@ -25,7 +25,7 @@ def reset_all():
     st.session_state.top_color = "밝음"
     st.session_state.bottom_type = "청바지"
     st.session_state.bottom_color = "슬림"
-    st.session_state.shoes = "스니커즈"
+    st.session_state.shoes = "운동화"
     st.session_state.acc = []
 
 import streamlit as st
