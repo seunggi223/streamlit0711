@@ -5,6 +5,14 @@ name = st.text_input(
     "이름", placeholder = "이름"
 )
 
+grade = st.radio(
+    "학년",["1", "2", "3"]
+)
+class = st.number_input(
+    "반", min_value = 1, max_valume = 10, value = 1
+
+)
+
 
 
 
