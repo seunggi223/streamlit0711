@@ -15,3 +15,5 @@ if st.button("확인"):
 
 if st.button("눈 내리기"):
     st.snow()
+
+st.markdown("---")
